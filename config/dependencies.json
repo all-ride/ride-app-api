@@ -1,0 +1,28 @@
+{
+    "dependencies": [
+        {
+            "interfaces": "ride\\library\\api\\io\\ApiIO",
+            "class": "ride\\library\\api\\io\\AutoloaderApiIO",
+            "id": "autoloader"
+        },
+        {
+            "class": "ride\\library\\api\\ApiBrowser",
+            "id": "api",
+            "calls": [
+                {
+                    "method": "__construct",
+                    "arguments": [
+                        {
+                            "name": "includePaths",
+                            "type": "call",
+                            "properties": {
+                                "interface": "ride\\library\\api\\io\\ApiIO",
+                                "method": "getIncludePaths"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
